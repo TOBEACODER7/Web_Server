@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="../css/index.css" />
+        <title>Calculator</title>
+    </head>
+
+    <body>
+        <form method="post" action="cal.py">
+            <p class="conspicuous">This is a calculator!</p>
+            <hr>
+            <p class="defaultType">You can input two numbers in the textBox</p>
+            <div class="calType" >   
+                <br><b>the first number :</b>
+                <input type="text" name="num1"><br>
+                 <br><b>the option is :<b/>    <!--  运算符，支持加减乘除   -->
+                    <input type="radio" name="option" value="add">+&nbsp;
+                    <input type="radio" name="option" value="sub">-&nbsp;
+                    <input type="radio" name="option" value="mul">*&nbsp;
+                    <input type="radio" name="option" value="div">/
+                <br> 
+                <br><b>the second number :</b>
+                <input type="text" name="num2"><br>
+                <br>
+                <div style="text-align:center">
+                    <button class="butType" >submit</button>  
+                </div>
+                
+                <br>
+                <br>the answer is :
+                <br>$num1 $option $num2 = $ans<br>
+
+            </div>
+        </form>
+    </body>
+
+</html>
