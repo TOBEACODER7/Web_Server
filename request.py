@@ -1,124 +1,124 @@
-########################
-##########yjy###########
-########################
-
 import os
+import subprocess
+import time
+from argparse import FileType
+from socket import socket
 
 
 class HTTPRequest():
-    RootDir = '...'
-    NotFoundHtml = RootDir+'/404.html'
-
-    def __init__(self):
+    def __init__(self,socket,log_name):
+        print('@@@enter init')
+        self.response_body = ''             #响应主题
+        self.socket = socket
+        self.proc = None
         self.method = None
-        self.url = None
-        self.protocol = None
-        self.head = dict()
-        self.request_data = dict()
-        self.response_line = ''
-        self.response_head = dict()
-        self.response_body = ''
-        self.session = None
-        
+        self.msg = None
+        self.log_name = log_name
+        self.filesize = 0
+        self.status_code = 200
 
-    def passRequestLine(self, request_line):
-        header_list = request_line.split(' ')
-        self.method = header_list[0].upper()
-        self.url = header_list[1]
-        #对于/的请求，自动添加'index.html
-        if self.url == '/':
-            self.url = '/index.html'
-        self.protocol = header_list[2]
+    # 日志书写（文件大小）
+    def write_log(self):
+        content = self.msg[1].split(":")[1].replace(" ", "")
+        content = content + "--"
+        content = content + "[" + str(time.localtime().tm_year) + "-" + str(
+            time.localtime().tm_mon) + "-" + str(
+                time.localtime().tm_mday) + "-" + str(
+                    time.localtime().tm_hour) + "-" + str(
+                        time.localtime().tm_min) + "-" + str(
+                            time.localtime().tm_sec) + "]"
+        content = content + " \"" + self.msg[0].split("/")[0].replace(" ",
+                                                                    "") + " "
+        content = content + " " + self.msg[0].split(" ")[1].replace(" ",
+                                                                    "") + "\" "
+        content = content + str(self.filesize) + " "
+        content = content + str(self.status_code) + " "
+        for i in self.msg:
+            if (i.split(" ")[0] == "Referer:"):
+                content = content + i.split(" ")[1].replace(" ", "")
 
-
+        content = content + "\n"
+        with open(self.log_name, "a") as f:
+            f.write(content)
+    
     # 解析请求，得到请求的信息
-    def passRequest(self, request):
-        request = request.decode('utf-8')
-        if len(request.split('\r\n', 1)) != 2:
-            return
-        request_line, body = request.split('\r\n', 1)
-        request_head = body.split('\r\n\r\n', 1)[0]     # 头部信息
-        self.passRequestLine(request_line)
-        self.passRequestHead(request_head)
+    def passRequest(self,request):
+        ## print("@@enter passrequest")
+        request = request
+        request_line = request[0].split()
+        method = request_line[0]
+        filename = "index.html"
+        if(request_line[1] != '/'):
+            filename = request_line[1][1:]
+        self.msg = request
 
-        # 所有post视为动态请求
-        # get如果带参数也视为动态请求
-        # 解析请求的数据，然后发送到对应的处理文件上
-        if self.method == 'POST':
-            self.request_data = {}
-            request_body = body.split('\r\n\r\n', 1)[1]
-            parameters = request_body.split('&')   # 每一行是一个字段
-            for i in parameters:
-                if i=='':
-                    continue
-                key, val = i.split('=', 1)
-                self.request_data[key] = val
-            self.dynamicRequest(HTTPRequest.RootDir + self.url)
-        if self.method == 'GET':
-            if self.url.find('?') != -1:        # 含有参数的get
-                self.request_data = {}
-                req = self.url.split('?', 1)[1]
-                s_url = self.url.split('?', 1)[0]
-                parameters = req.split('&')
-                for i in parameters:
-                    key, val = i.split('=', 1)
-                    self.request_data[key] = val
-                self.dynamicRequest(HTTPRequest.RootDir + s_url)
-            else:
-                self.staticRequest(HTTPRequest.RootDir + self.url)
+        self.filesize = os.path.getsize(filename)
+        if method == 'POST':
+            args = request[-1]
 
-    
-    # 静态请求
-    def staticRequest(self, path):
-        # print path
-        if not os.path.isfile(path):
-            f = open(HTTPRequest.NotFoundHtml, 'r')
-            self.response_line = "HTTP/1.1 404 Not Found\r\n"
-            self.response_head['Content-Type'] = 'text/html'
-            self.response_body = f.read()
-        else:
-            extension_name = os.path.splitext(path)[1]  # 扩展名
-            extension_set = {'.css', '.html', '.js'}
-            if extension_name == '.png':
-                f = open(path, 'rb')
-                self.response_line = "HTTP/1.1 200 OK\r\n"
-                self.response_head['Content-Type'] = 'text/png'
-                self.response_body = f.read()
-            elif extension_name in extension_set:
-                f = open(path, 'r')
-                self.response_line = "HTTP/1.1 200 OK\r\n"
-                self.response_head['Content-Type'] = 'text/html'
-                self.response_body = f.read()
-            elif extension_name == '.py':
-                self.dynamicRequest(path)
-            # 其他文件不返回
+            if(os.path.isfile(filename)):
+                ## print('$$$'+filename)
+                
+                ## print(filename)
+                cmd = 'python3 ' + filename + ' "' + args + '" "' + self.socket.getsockname()[0] + '" "' + str(self.socket.getsockname()[1]) + '"'
+                
+                self.proc = subprocess.Popen(cmd,shell=True,stdout=subprocess.PIPE)
+                self.proc.wait()
+
+                content = b"HTTP/1.1 200 OK\r\nContent-Type: text/html;charset=utf-8\r\n"
+                file1 = open('res.html', 'rb').read()
+                content += b"Content-Length: " + str(len(file1)).encode('utf-8') + b"\r\n\r\n"
+                content += file1
+                self.status_code = 200
+
             else:
-                f = open(HTTPRequest.NotFoundHtml, 'r')
-                self.response_line = "HTTP/1.1 404 Not Found\r\n"
-                self.response_head['Content-Type'] = 'text/html'
-                self.response_body = f.read()
-    
-    
-    def dynamicRequest(self, path):
-        # 区分动态和静态请求仅根据是否是.py结尾
-        # 如果找不到或者后缀名不是py则输出404
-        if not os.path.isfile(path) or os.path.splitext(path)[1] != '.py':
-            f = open(HTTPRequest.NotFoundHtml, 'r')
-            self.response_line = "HTTP/1.1 404 Not Found\r\n"
-            self.response_head['Content-Type'] = 'text/html'
-            self.response_body = f.read()
-        else:
-            # 获取文件名，并且将/替换成.
-            file_path = path.split('.', 1)[0].replace('/', '.')
-            self.response_line = "HTTP/1.1 200 OK\r\n"
-            m = __import__(file_path)
-            m.main.SESSION = self.processSession()            
-            if self.method == 'POST':
-                m.main.POST = self.request_data
-                m.main.GET = None
+                content = b"HTTP/1.1 403 Forbidden\r\nContent-Type: text/html;charset=utf-8\r\n"
+                page = b''
+                self.file_handle = open("403.html", "rb")
+                for line in self.file_handle:
+                    page += line
+                content += b'\r\n'
+                content += page
+                self.status_code = 403
+            
+            content += b"\r\n"
+            self.response_body = content
+              ## filesize = os.path.getsize(filename)
+
+        if method == 'GET':
+            ## print('@@'+filename)
+            if(os.path.isfile(filename)):
+                print('@'+filename)
+                file = open(filename, 'rb').read()
+                FileType = filename.split('.')[-1]
+                content = b"HTTP/1.1 200 OK\r\nContent-Type: text/"+ FileType.encode() + b";charset=utf-8\r\n"
+                content += b"Content-Length: " + str(len(file)).encode('utf-8') + b"\r\n\r\n"
+                content += file
+                self.status_code = 200
             else:
-                m.main.POST = None
-                m.main.GET = self.request_data
-            self.response_body = m.main.app()            
-            self.response_head['Content-Type'] = 'text/html'
-            self.response_head['Set-Cookie'] = self.Cookie
+                content = b"HTTP/1.1 404 Not Found\r\nContent-Type: text/html;charset=utf-8\r\n"
+                filename = "404.html"
+                self.status_code = 403
+            content += b"\r\n"
+            self.response_body = content
+
+        if method == 'HEAD':
+            ## print('@@'+filename)
+            if(os.path.isfile(filename)):
+                print('@'+filename)
+                file = open(filename, 'rb').read()
+                FileType = filename.split('.')[-1]
+                content = b"HTTP/1.1 200 OK\r\nContent-Type: text/"+ FileType.encode() + b";charset=utf-8\r\n"
+                content += b"Content-Length: " + str(len(file)).encode('utf-8') + b"\r\n\r\n"
+                self.status_code = 200
+            else:
+                content = b"HTTP/1.1 404 Not Found\r\nContent-Type: text/html;charset=utf-8\r\n"
+                filename = "404.html"
+                self.status_code = 403
+            content += b"\r\n"
+            self.response_body = content
+
+        self.write_log()
+    
+   
+    

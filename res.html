@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/index.css" />
+    <title>Data Search</title>
+</head>
+
+<body>
+    <p class="conspicuous">This is a data-search page!</p>
+    <form method="post" action="query.py">
+        <p class="defaultType">Please input the studentID:</p>
+        <div style="text-align:center">
+            The studentID is: <input type="text" name="id">
+        </div>
+        <br>
+        <!--
+        <div style="text-align:center">
+            <input type="submit" value="Cal" />
+        </div>
+        -->
+        <div style="text-align:center">
+            <button class="butType">submit</button>
+        </div>
+        <br>
+    </form>
+    <hr>
+    <br>
+    <div style="text-align:center">
+    <p class="defaultType">The student information is:</p>
+    
+    The studentID is wrong, please search again!
+    
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div style="text-align:center">
+        <button class="butType" onclick="window.location.href='../index.html'">Return:index.html</button>
+    </div>
+</body>
+
+</html>

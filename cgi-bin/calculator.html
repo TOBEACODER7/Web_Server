@@ -8,14 +8,17 @@
     </head>
 
     <body>
+        <p class="conspicuous">This is a calculator!</p>
+        <hr>
+        <!--
         <form method="post" action="cal.py">
-            <p class="conspicuous">This is a calculator!</p>
-            <hr>
+        -->
+        <form method="post" action="cal.py">
             <p class="defaultType">You can input two numbers in the textBox</p>
             <div class="calType" >   
                 <br><b>the first number :</b>
                 <input type="text" name="num1"><br>
-                 <br><b>the option is :<b/>    <!--  ÔËËã·û£¬Ö§³Ö¼Ó¼õ³Ë³ý   -->
+                 <br><b>the option is :</b>    <!--  è¿ç®—ç¬¦ï¼Œæ”¯æŒåŠ å‡ä¹˜é™¤   -->
                     <input type="radio" name="option" value="add">+&nbsp;
                     <input type="radio" name="option" value="sub">-&nbsp;
                     <input type="radio" name="option" value="mul">*&nbsp;
@@ -27,13 +30,19 @@
                 <div style="text-align:center">
                     <button class="butType" >submit</button>  
                 </div>
-                
                 <br>
+        </form>
+                <hr>
                 <br>the answer is :
                 <br>$num1 $option $num2 = $ans<br>
-
             </div>
-        </form>
+        
+        <br>
+        <hr>
+        <br>
+        <div style="text-align:center">
+            <button class="butType" onclick="window.location.href='../index.html'">Return:index.html</button>
+        </div>
     </body>
 
 </html>

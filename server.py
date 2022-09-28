@@ -1,26 +1,17 @@
 import socket
 import threading
 import time
-from webbrowser import get
 
-from myThread import myThread, sema, tasks, working_thread
-
-max_connection = 5
-port = 8989
-
-socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-socket.bind(('0.0.0.0', port))
-socket.listen(port)
+from myThread import myThread, tasks, timer, working_thread
 
 
 class thread_pool(threading.Thread):
-
-    def __init__(self):
+    def __init__(self,max_connection):
         threading.Thread.__init__(self)
         self.setDaemon(True)
         self.log_name = self.get_log_name()
+        self.max_connection=max_connection
         self.start()
-        
 
     def get_log_name(self):
         now_time = time.localtime()
@@ -31,49 +22,48 @@ class thread_pool(threading.Thread):
         return log_name
 
     def run(self):
-        for i in range(max_connection):
+        #创建线程
+        for i in range(self.max_connection):
             myThread(self.log_name)
         while True:
-            for i in range(10):
-                if (len(working_thread) >= max_connection
-                        and max_connection != 0 and (not tasks.empty())):
-                    print("shutdown")
-                    working_thread[0].restart()
-            sema.acquire(timeout=1)
-
+            #每隔1s打印
+            timer.acquire(timeout=1)
             working_thread_cnt = len(working_thread)
-            print("now working thread: " + str(working_thread_cnt) +
-                  " ; free thread: " +
-                  str(max_connection - working_thread_cnt) +
-                  " ; now waiting request: " + str(tasks.qsize()))
+            print("\n")
+            print("Working thread: " + str(working_thread_cnt) +
+                  " ; Free thread: " + str(self.max_connection - working_thread_cnt) +
+                  " ; Waiting request: " + str(tasks.qsize()))
+            print("working_thread list: ",working_thread,"\n")
 
 
-def SendToClient(client):
-    print(client.recv(1024).decode().splitlines()[0].split())
-    filename = "index.html"  ##这里暂时先写死不管client发过来任何请求，都给他返回POST index.html
-    ## filename = "/cgi-bin/calculator.html"
-    filedata = open(filename, "rb").read()
-    message = b"HTTP/1.1 200 OK\r\nContent-Type: text/html;charset=utf-8\r\n"
-    message += b"Content-Length: " + str(len(filedata)).encode() + b"\r\n\r\n"
-    message += filedata
-    client.send(message)
-    client.close()
+
+def main():
+    max_connection = int(input("输入最大线程数："))
+    #max_connection = 10
+    port = 8989
+
+    Server_Socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    Server_Socket.bind(('0.0.0.0', port))
+    Server_Socket.listen(port)
+
+    #实例化线程库
+    thread_pool(max_connection)
+    #打开监听
+    while True:
+        try:
+            client, address = Server_Socket.accept()
+            print("\n")
+            print('Connected to: ', address)
+            print(tasks.qsize(),working_thread)
+            #加入任务列表：
+            tasks.put(client)
+            print(tasks.qsize(),working_thread)
 
 
-#实例化线程库
-thread_pool()
-#打开监听
-while True:
-    try:
-        client, address = socket.accept()
-        print('Connected to', address)
-        ## there connect has been set up
+        except KeyboardInterrupt:
+            print('Server closed')
+            break
 
-        #加入线程池：
-        tasks.put(client)
-        
-        #SendToClient(client)
 
-    except KeyboardInterrupt:
-        print('Server closed')
-        break
+if __name__=="__main__":
+    main()

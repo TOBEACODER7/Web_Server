@@ -1,15 +1,16 @@
-html{
+html {
     width: 100%;
     height: 100%;
     font-style: Microsoft YaHei;
 }
 
-body{
+body {
     overflow-x: hidden;
     overflow-y: auto;
 }
-/* conspicuous????????????????????????????? */
-.conspicuous{
+
+/* conspicuous：本部分是用作每张网页的最醒目行 */
+.conspicuous {
     font: bolder italic;
     font-size: xx-large;
     font-weight: bold;
@@ -18,40 +19,51 @@ body{
     text-decoration: underline;
 }
 
-/* defaultType??????????????????? */
-.defaultType{
+/* defaultType：本部分是默认文字格式 */
+.defaultType {
     text-align: center;
     font-size: larger;
     font-weight: normal;
 }
 
-/* sign?????????????????????? */
-.sign{
+/* sign：本部分是组员落款文字格式 */
+.sign {
     text-align: center;
     line-height: 5px;
 }
 
-/* butType??????????????? */
-.butType{
+/* butType：本部分是按钮格式 */
+.butType {
     text-align: center;
-    transition-duration: 0.5s;      /* ????��????????? */
-    padding: 16px 32px;             /* ??? */
-    background-color: white;      
+    transition-duration: 0.5s;
+    /* 过渡效果花费时间 */
+    padding: 16px 32px;
+    /* 填充 */
+    background-color: white;
     color: black;
     border: 2px solid #4CAF50;
-    border-radius:15px;             /* ?????? */
+    border-radius: 15px;
+    /* 圆角弧度 */
     font-size: large;
-    font:bolder italic;
+    font: bolder italic;
 }
-.button1:hover {                    /* ?????????????? */
+
+.button1:hover {
+    /* 鼠标移上时新的行为 */
     background-color: #ffffff;
     color: blueviolet;
 }
 
-.calType{
+.calType {
     text-align: left;
     width: 50%;
     height: 50%;
     margin: 0 auto;
 }
 
+.tableType {
+    text-align: center;
+    width: 20%;
+    height: 20%;
+    margin:0 auto;
+}

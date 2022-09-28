@@ -1,0 +1,651 @@
+now blocking:  <myThread(Thread-2, started daemon 140250740442880)>
+now blocking:  <myThread(Thread-3, started daemon 140250732050176)>
+now blocking:  <myThread(Thread-4, started daemon 140250723657472)>
+now blocking:  <myThread(Thread-5, started daemon 140250715264768)>
+now blocking:  <myThread(Thread-6, started daemon 140250706872064)>
+now blocking:  <myThread(Thread-7, started daemon 140250698479360)>
+now blocking:  <myThread(Thread-8, started daemon 140250690086656)>
+now blocking:  <myThread(Thread-9, started daemon 140250210891520)>
+now blocking:  <myThread(Thread-10, started daemon 140250202498816)>
+now blocking:  <myThread(Thread-11, started daemon 140250194106112)>
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Connected to:  ('114.246.198.83', 22531)
+0 []
+1 []
+now running:  <myThread(Thread-2, started daemon 140250740442880)>
+Working thread: 1 ; Free thread: 9 ; Waiting request: 0
+working_thread list:  [<myThread(Thread-2, started daemon 140250740442880)>] 
+
+['GET / HTTP/1.1', 'Host: 101.201.155.42:8989', 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6.1 Safari/605.1.15', 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Encoding: gzip, deflate', 'Accept-Language: en-US,en;q=0.9', 'Upgrade-Insecure-Requests: 1', '']
+@@@enter init
+@index.html
+before: [<myThread(Thread-2, started daemon 140250740442880)>]
+after: []
+now blocking:  <myThread(Thread-2, started daemon 140250740442880)>
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Connected to:  ('114.246.198.83', 25859)
+0 []
+1 []
+now running:  <myThread(Thread-3, started daemon 140250732050176)>
+['GET /css/index.css HTTP/1.1', 'Host: 101.201.155.42:8989', 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6.1 Safari/605.1.15', 'Accept: text/css,*/*;q=0.1', 'Accept-Encoding: gzip, deflate', 'Accept-Language: en-US,en;q=0.9', 'Referer: http://101.201.155.42:8989/', '']
+@@@enter init
+@css/index.css
+Working thread: 1 ; Free thread: 9 ; Waiting request: 0
+working_thread list:  [<myThread(Thread-3, started daemon 140250732050176)>] 
+
+before: [<myThread(Thread-3, started daemon 140250732050176)>]
+after: []
+now blocking:  <myThread(Thread-3, started daemon 140250732050176)>
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Connected to:  ('114.246.198.83', 43088)
+0 []
+1 []
+now running:  <myThread(Thread-4, started daemon 140250723657472)>
+Working thread: 1 ; Free thread: 9 ; Waiting request: 0
+working_thread list:  [<myThread(Thread-4, started daemon 140250723657472)>] 
+
+['GET /cgi-bin/calculator.html HTTP/1.1', 'Host: 101.201.155.42:8989', 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6.1 Safari/605.1.15', 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Encoding: gzip, deflate', 'Accept-Language: en-US,en;q=0.9', 'Referer: http://101.201.155.42:8989/', 'Upgrade-Insecure-Requests: 1', '']
+@@@enter init
+@cgi-bin/calculator.html
+before: [<myThread(Thread-4, started daemon 140250723657472)>]
+after: []
+now blocking:  <myThread(Thread-4, started daemon 140250723657472)>
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Connected to:  ('114.246.198.83', 32727)
+0 []
+1 []
+now running:  <myThread(Thread-5, started daemon 140250715264768)>
+Working thread: 1 ; Free thread: 9 ; Waiting request: 0
+working_thread list:  [<myThread(Thread-5, started daemon 140250715264768)>] 
+
+['GET /css/index.css HTTP/1.1', 'Host: 101.201.155.42:8989', 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6.1 Safari/605.1.15', 'Accept: text/css,*/*;q=0.1', 'Accept-Encoding: gzip, deflate', 'Accept-Language: en-US,en;q=0.9', 'Referer: http://101.201.155.42:8989/cgi-bin/calculator.html', '']
+@@@enter init
+@css/index.css
+before: [<myThread(Thread-5, started daemon 140250715264768)>]
+after: []
+now blocking:  <myThread(Thread-5, started daemon 140250715264768)>
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Connected to:  ('114.246.198.83', 29749)
+0 []
+1 []
+now running:  <myThread(Thread-6, started daemon 140250706872064)>
+Working thread: 1 ; Free thread: 9 ; Waiting request: 0
+working_thread list:  [<myThread(Thread-6, started daemon 140250706872064)>] 
+
+['POST /cgi-bin/cal.py HTTP/1.1', 'Host: 101.201.155.42:8989', 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6.1 Safari/605.1.15', 'Content-Length: 24', 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Encoding: gzip, deflate', 'Accept-Language: en-US,en;q=0.9', 'Content-Type: application/x-www-form-urlencoded', 'Origin: http://101.201.155.42:8989', 'Referer: http://101.201.155.42:8989/cgi-bin/calculator.html', 'Upgrade-Insecure-Requests: 1', '']
+@@@enter init
+before: [<myThread(Thread-6, started daemon 140250706872064)>]
+after: []
+now blocking:  <myThread(Thread-6, started daemon 140250706872064)>
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Connected to:  ('114.246.198.83', 25877)
+0 []
+1 []
+now running:  <myThread(Thread-7, started daemon 140250698479360)>
+Working thread: 1 ; Free thread: 9 ; Waiting request: 0
+working_thread list:  [<myThread(Thread-7, started daemon 140250698479360)>] 
+
+['GET / HTTP/1.1', 'Host: 101.201.155.42:8989', 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36', 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9', 'Accept-Encoding: gzip, deflate', 'Accept-Language: zh-CN,zh;q=0.9', 'Upgrade-Insecure-Requests: 1', '']
+@@@enter init
+@index.html
+before: [<myThread(Thread-7, started daemon 140250698479360)>]
+after: []
+now blocking:  <myThread(Thread-7, started daemon 140250698479360)>
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Connected to:  ('114.246.198.83', 35036)
+0 []
+1 []
+now running:  <myThread(Thread-8, started daemon 140250690086656)>
+['GET /css/index.css HTTP/1.1', 'Host: 101.201.155.42:8989', 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36', 'Accept: text/css,*/*;q=0.1', 'Accept-Encoding: gzip, deflate', 'Accept-Language: zh-CN,zh;q=0.9', 'Referer: http://101.201.155.42:8989/', '']
+@@@enter init
+@css/index.css
+before: [<myThread(Thread-8, started daemon 140250690086656)>]
+after: []
+now blocking:  <myThread(Thread-8, started daemon 140250690086656)>
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Connected to:  ('114.246.198.83', 33443)
+0 []
+1 []
+now running:  <myThread(Thread-9, started daemon 140250210891520)>
+['GET /favicon.ico HTTP/1.1', 'Host: 101.201.155.42:8989', 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36', 'Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8', 'Accept-Encoding: gzip, deflate', 'Accept-Language: zh-CN,zh;q=0.9', 'Referer: http://101.201.155.42:8989/', '']
+@@@enter init
+@favicon.ico
+Working thread: 1 ; Free thread: 9 ; Waiting request: 0
+working_thread list:  [<myThread(Thread-9, started daemon 140250210891520)>] 
+
+before: [<myThread(Thread-9, started daemon 140250210891520)>]
+after: []
+now blocking:  <myThread(Thread-9, started daemon 140250210891520)>
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Connected to:  ('114.246.198.83', 32518)
+0 []
+1 []
+now running:  <myThread(Thread-10, started daemon 140250202498816)>
+['GET /cgi-bin/calculator.html HTTP/1.1', 'Host: 101.201.155.42:8989', 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36', 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9', 'Accept-Encoding: gzip, deflate', 'Accept-Language: zh-CN,zh;q=0.9', 'Referer: http://101.201.155.42:8989/', 'Upgrade-Insecure-Requests: 1', '']
+@@@enter init
+@cgi-bin/calculator.html
+before: [<myThread(Thread-10, started daemon 140250202498816)>]
+after: []
+now blocking:  <myThread(Thread-10, started daemon 140250202498816)>
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Connected to:  ('114.246.198.83', 36407)
+0 []
+1 []
+now running:  <myThread(Thread-11, started daemon 140250194106112)>
+Working thread: 1 ; Free thread: 9 ; Waiting request: 0
+working_thread list:  [<myThread(Thread-11, started daemon 140250194106112)>] 
+
+['GET /css/index.css HTTP/1.1', 'Host: 101.201.155.42:8989', 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36', 'Accept: text/css,*/*;q=0.1', 'Accept-Encoding: gzip, deflate', 'Accept-Language: zh-CN,zh;q=0.9', 'Referer: http://101.201.155.42:8989/cgi-bin/calculator.html', '']
+@@@enter init
+@css/index.css
+before: [<myThread(Thread-11, started daemon 140250194106112)>]
+after: []
+now blocking:  <myThread(Thread-11, started daemon 140250194106112)>
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Connected to:  ('114.246.198.83', 34189)
+0 []
+1 []
+now running:  <myThread(Thread-2, started daemon 140250740442880)>
+Working thread: 1 ; Free thread: 9 ; Waiting request: 0
+working_thread list:  [<myThread(Thread-2, started daemon 140250740442880)>] 
+
+['POST /cgi-bin/cal.py HTTP/1.1', 'Host: 101.201.155.42:8989', 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36', 'Content-Length: 24', 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9', 'Accept-Encoding: gzip, deflate', 'Accept-Language: zh-CN,zh;q=0.9', 'Cache-Control: max-age=0', 'Content-Type: application/x-www-form-urlencoded', 'Origin: http://101.201.155.42:8989', 'Referer: http://101.201.155.42:8989/cgi-bin/calculator.html', 'Upgrade-Insecure-Requests: 1', '', 'num1=2&option=add&num2=1']
+@@@enter init
+before: [<myThread(Thread-2, started daemon 140250740442880)>]
+after: []
+now blocking:  <myThread(Thread-2, started daemon 140250740442880)>
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Connected to:  ('66.60.182.71', 45346)
+0 []
+1 []
+now running:  <myThread(Thread-3, started daemon 140250732050176)>
+Working thread: 1 ; Free thread: 9 ; Waiting request: 0
+working_thread list:  [<myThread(Thread-3, started daemon 140250732050176)>] 
+
+['GET / HTTP/1.1', 'Host: 101.201.155.42:8989', 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36', 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9', 'Referer: https://www.google.com/', 'Accept-Encoding: gzip, deflate', 'Accept-Language: en-US,en;q=0.9', 'Upgrade-Insecure-Requests: 1', 'Connection: close', '']
+@@@enter init
+@index.html
+before: [<myThread(Thread-3, started daemon 140250732050176)>]
+after: []
+now blocking:  <myThread(Thread-3, started daemon 140250732050176)>
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
+working_thread list:  [] 
+
+Working thread: 0 ; Free thread: 10 ; Waiting request: 0
