@@ -2,6 +2,7 @@
 BIT computer network practice
 ## 项目结构
 采用python语言，在VSCode中构建了整个项目，结构如下：
+```
 ├── cgi-bin             					// cgi程序文件夹
 │   ├── cal.py          						// 计算器程序 
 │   ├── calculator.html     						// 计算结果页面
@@ -21,3 +22,4 @@ BIT computer network practice
 ├── request.py							// 请求处理类
 ├── server.py            				 	// 服务器主函数
 └── myThread.py            		 		// 服务线程的具体实现
+```
